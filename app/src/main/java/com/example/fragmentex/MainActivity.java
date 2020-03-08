@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         // get the reference of Button's
-        firstFragment = (Button) findViewById(R.id.btn_first_fragment);
-        secondFragment = (Button) findViewById(R.id.btn_second_fragment);
+        firstFragment =  findViewById(R.id.btn_first_fragment);
+        secondFragment = findViewById(R.id.btn_second_fragment);
 
         // perform setOnClickListener event on First Button
         firstFragment.setOnClickListener(this);
