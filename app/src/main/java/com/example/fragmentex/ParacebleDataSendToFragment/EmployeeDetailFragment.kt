@@ -11,6 +11,7 @@ import com.example.fragmentex.R
 
 class EmployeeDetailFragment : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -26,7 +27,21 @@ class EmployeeDetailFragment : Fragment() {
             tvPassword.text = employee.password
         }
 
+
         return viewObj
     }
+
+
+    companion object {
+        fun newInstance(employee: Employee): EmployeeDetailFragment {
+
+            val bundle = Bundle()
+            bundle.putParcelable("employeeObj", employee)
+            val employeeDetailFragment = EmployeeDetailFragment()
+            employeeDetailFragment.arguments = bundle
+            return employeeDetailFragment
+        }
+    }
+
 
 }

@@ -13,15 +13,17 @@ class EmployeeActivity : AppCompatActivity() {
 
         btn_login.setOnClickListener {
 
-            val employeeDetailFragment = EmployeeDetailFragment()
 
             var employee = Employee(et_user_name.text.toString(),et_password.text.toString())
 
-            val bundle = Bundle()
-            bundle.putParcelable("employeeObj",employee)
+            val employeeDetailFragment = EmployeeDetailFragment.newInstance(employee)
 
-            employeeDetailFragment.arguments = bundle
 
+            /* val bundle = Bundle()
+             bundle.putParcelable("employeeObj",employee)
+
+             employeeDetailFragment.arguments = bundle
+ */
             val fm = fragmentManager
             val ft = fm.beginTransaction()
             ft.replace(R.id.frame_layout,employeeDetailFragment)
