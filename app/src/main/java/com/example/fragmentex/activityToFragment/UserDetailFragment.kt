@@ -23,7 +23,7 @@ class UserDetailFragment : Fragment() {
 
 
     fun setData(name: String) {
-        tvUser!!.setText(name)
+        tvUser!!.text = name
 
     }
 
